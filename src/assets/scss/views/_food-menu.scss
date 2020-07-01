@@ -1,0 +1,147 @@
+.food-menu{
+
+  padding-top: var(--header-height);
+
+  padding-bottom: var(--footer-menu-height);
+
+  &--tabs{
+
+    position: fixed;
+
+    top: 51px;
+
+    z-index: 10;
+
+    width: 100%;
+
+    display: flex;
+
+    padding: 10px 20px;
+
+    background: #efefef;
+
+
+    button{
+
+      width: 50%;
+
+      height: 40px;
+
+      padding: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      &.active{
+
+        background:  rgba($color-body, 0.3);
+
+      }
+
+
+      &:first-of-type{
+
+        border-top: 1px solid rgba($color-body, 0.3);
+
+        border-left: 1px solid rgba($color-body, 0.3);
+
+        border-bottom: 1px solid rgba($color-body, 0.3);
+
+        border-right:  1px solid rgba($color-body, 0.3);
+
+        border-bottom-left-radius: 6px;
+
+        border-top-left-radius: 6px;
+
+      }
+
+      &:last-of-type{
+
+        border-top: 1px solid rgba($color-body, 0.3);
+
+        border-right: 1px solid rgba($color-body, 0.3);
+
+        border-bottom: 1px solid rgba($color-body, 0.3);
+
+        border-top-right-radius: 6px;
+
+        border-bottom-right-radius: 6px;
+
+      }
+
+
+    }
+
+  }
+
+  &--menu{
+
+    float: left;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    .item{
+
+      float: left;
+
+      width: calc(50% - 10px);
+
+      margin-bottom: 20px;
+
+      box-shadow: 0 4px 7px  rgba(0,0,0,0.1);
+
+      border-radius: 6px;
+
+      overflow: hidden;
+
+      figure{
+
+        height: 110px;
+
+        margin: 0 !important;
+
+      }
+
+      &-body{
+
+        padding: 10px;
+
+        background: #fff;
+
+        font-size: 14px;
+
+        line-height: 15px;
+
+        border-left: 1px solid rgba($color-body, 0.1);
+
+        border-bottom: 1px solid rgba($color-body, 0.1);
+
+        border-right: 1px solid rgba($color-body, 0.1);
+
+        border-bottom-left-radius: 6px;
+
+        border-bottom-right-radius: 6px;
+
+        .price{
+
+          margin-top: 8px;
+
+        }
+
+      }
+
+
+    }
+
+  }
+
+}

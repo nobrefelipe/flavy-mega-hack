@@ -1,0 +1,353 @@
+
+/*
+  VIEWPORT SETTINGS
+*/
+%view-reset{
+  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
+
+}
+
+
+
+/*
+  HTML/BODY
+*/
+html, body{
+
+
+  scroll-behavior: smooth;
+
+
+}
+
+
+
+
+/*
+  APP
+*/
+#app{@extend %view-reset;}
+
+
+
+
+/*
+  VIEW WRAPPER
+*/
+.view-wrapper{
+
+  float: left;
+
+  background: #fff;
+
+  @extend %view-reset;
+
+}
+
+
+/*
+  WRAPPER
+*/
+.wrapper{
+
+  float: left;
+
+  display: flex;
+
+  width: 100%;
+
+  padding: 20px;
+
+}
+
+
+/*
+  IMAGE SETTINGS
+*/
+figure{
+
+  width: 100%;
+
+  height: 100%;
+
+  transition: all .3s cubic-bezier(.28,.8,.28,.8);
+
+  margin: 0 !important;
+
+  overflow: hidden;
+
+  display: flex !important;
+
+  justify-content: center;
+
+  img{
+
+    width: auto;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: 50% 50%;
+
+    transition: all .3s cubic-bezier(.28,.8,.28,.8);
+
+    &.landscape{ width: 100%; object-fit: cover}
+    &.portrait{ height: 100%; object-fit: contain}
+
+    &.lazyload{
+
+      background: #ededed;
+
+      opacity: 0;
+
+      &.loaded{ background: none; opacity: 1}
+
+    }
+
+  }
+
+}
+
+
+
+.fixed-centered{
+
+  width: 100%;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  z-index: 100;
+
+  transform: translate3d(-50%,-50%,0)
+
+}
+
+
+
+.page-hero{
+
+  float: left;
+
+  width: 100%;
+
+  height: 28vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: $color-secondary;
+
+  img{opacity: 0.2;}
+
+  h2{
+
+    position: absolute;
+
+    z-index: 10;
+
+    color: #fff;
+
+    text-align: center;
+
+
+  }
+
+}
+
+
+.row{
+
+  float: left;
+
+  width: 100%;
+
+  padding: 0 20px;
+
+  &.nopadding{padding: 0}
+
+}
+
+
+
+
+.faded {
+  transition: all 0.5s;
+
+}
+.faded-enter, .faded-leave-to
+  /* .card-leave-active for <2.1.8 */ {
+  opacity: 0;
+  /*transform: scale(0);*/
+}
+.faded-enter-to {
+  opacity: 1;
+  /*transform: scale(1);*/
+}
+
+.faded-leave-active {
+  /*position: absolute;*/
+}
+
+.faded-move {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+
+
+
+//main{
+//
+//  display: grid !important;
+//  grid-template: "main";
+//  flex: 1;
+//
+//  & > * {
+//    grid-area: main; /* Transition: make sections overlap on same cell */
+//    background-color: white;
+//    position: relative;
+//  }
+//
+//  & > :first-child {
+//    z-index: 1; /* Prevent flickering on first frame when transition classes not added yet */
+//  }
+//
+//}
+//
+
+
+
+
+/* Transitions */
+
+
+
+/* Transitions */
+
+.faded-leave-to {
+  animation: fadedToLeft 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 0;
+}
+
+.faded-enter-to {
+  animation: fadedFromRight 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+
+.faded-leave-to {
+  animation: fadedToRight 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+
+.faded-enter-to {
+  animation: fadedFromLeft 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 0;
+}
+
+@keyframes fadedToLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadedFromLeft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadedToRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadedFromRight {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.next-leave-to {
+  animation: leaveToLeft 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 0;
+}
+
+.next-enter-to {
+  animation: enterFromRight 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+
+.prev-leave-to {
+  animation: leaveToRight 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+
+.prev-enter-to {
+  animation: enterFromLeft 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 0;
+}
+
+@keyframes leaveToLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+    filter: brightness(0.5);
+  }
+}
+
+@keyframes enterFromLeft {
+  from {
+    transform: translateX(-25%);
+    filter: brightness(0.5);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes leaveToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes enterFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

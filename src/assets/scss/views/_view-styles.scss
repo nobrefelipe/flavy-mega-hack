@@ -1,0 +1,14 @@
+.view-body{
+
+  width: 100%;
+
+  position: fixed;
+
+  top:51px; left: 0;
+
+  height: calc(var(--header-height) + var(--footer-menu-height));
+
+  overflow-x: hidden;
+
+
+}

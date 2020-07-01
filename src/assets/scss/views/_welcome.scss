@@ -1,0 +1,158 @@
+.welcome{
+
+  height: 100%;
+
+  overflow: hidden;
+
+  position: fixed;
+
+  top: 0; left:0; bottom: 0; right: 0;
+
+  background: $color-secondary;
+
+  .logo{
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate3d(-50%, -200%, 0);
+
+    z-index: 100;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: -40px;
+
+
+    img{ height: 60px;}
+
+
+    span{
+
+      font-size: 14px;
+
+      color: #fff;
+
+      margin-top: 15px;
+
+    }
+
+  }
+
+  .slogan{
+
+    position: fixed;
+
+    top:0; left: 0;
+
+    z-index: 0;
+
+    height: 100%;
+
+    width: 100vw;
+
+    background: $color-secondary;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    h2{
+
+      font-weight: bold;
+
+      font-size: 30px;
+
+      color: $color-primary;
+
+      font-family: 'Futura-Medium';
+
+      margin-bottom: 40px;
+
+      &:first-of-type{ margin-top: 30vh;}
+
+    }
+
+  }
+
+  figure{
+
+    position: fixed;
+
+    top:0; left: 0;
+
+    z-index: 0;
+
+    height: 100%;
+
+    background: $color-secondary;
+
+    img{
+
+      object-fit: cover !important;
+
+      width: 100% !important;
+
+    }
+
+  }
+
+
+
+
+  &-panel{
+
+    position: fixed;
+
+    bottom: 0; left: 0;
+
+    z-index: 1;
+
+    transform: translate3d(0, 100%, 0);
+
+    width: 100%;
+
+    padding: 40px 40px 10px 40px;
+
+    background: #fff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    transition: all .2s cubic-bezier(.28,.8,.28,.8);
+
+
+    h2{
+
+      font-size: 16px;
+
+      line-height: 24px;
+
+      strong{ font-size: 35px;}
+
+    }
+
+
+    button{ margin-top: 15px;}
+
+    a{ float: left; margin-top: 30px; font-size: 12px}
+  }
+
+
+}

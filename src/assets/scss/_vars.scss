@@ -1,0 +1,50 @@
+/*
+
+  PALETTE
+
+*/
+
+$color-primary: #DD4B4B;
+$color-secondary: #2C2E3F;
+$color-body: #8190A5;
+
+$color-body-cards: #bfbfc5;
+$color-info-cards: #ffffff;
+
+
+body{
+
+  --color-primary: #DD4B4B;
+  --color-secondary: #2C2E3F;
+  --color-body: #6a6b77;
+  --color-body-cards: #bfbfc5;
+  --color-info-cards: #ffffff;
+
+}
+
+
+.text-color{
+
+  &-secondary{color: rgba($color-secondary, 0.8)}
+
+  &-primary{color: $color-primary}
+
+}
+
+
+/*
+
+  VARIABLES
+
+*/
+
+:root{
+
+  --header-height: 51px;
+
+  --filters-height: 60px;
+
+  --footer-menu-height: 71px;
+
+}
+

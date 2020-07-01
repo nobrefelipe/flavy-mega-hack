@@ -1,0 +1,21 @@
+.introduction{
+
+  display: flex;
+
+  flex-direction: column;
+
+  .wrapper{ padding-top: 40px; flex-flow: column}
+
+  h2{
+
+    font-size: 18px;
+
+    margin-bottom: 40px;
+
+  }
+
+  .ant-btn-primary{ margin-top: 15px}
+
+  .know-more{ margin: auto auto 80px auto}
+
+}
