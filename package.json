@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "now-build": "npm run build",
     "build": "vue-cli-service build",
-    "now-dev": "vue-cli-service serve  --port=$PORT"
+    "now-dev": "vue-cli-service serve  --port=$PORT",
+    "deploy": "now && now alias https://flavy-app.felipenobre.now.sh https://demo.flavy.app"
   },
   "dependencies": {
     "ant-design-vue": "^1.3.9",
