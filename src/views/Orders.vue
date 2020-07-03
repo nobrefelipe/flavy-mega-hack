@@ -37,14 +37,14 @@
 
                    <span class="orders-item--edited" v-if="item.customText">
 
-                       <strong style="color: #000">Riechiesta: </strong>
+                       <strong style="color: #000">Remover: </strong>
                        <span>{{ item.customText }}</span>
 
                     </span>
 
                    <div class="orders-item--toppings" v-if="item.toppings.length">
 
-                       <strong style="color: #000">Aggiungere: </strong>
+                       <strong style="color: #000">Adicionar: </strong>
 
                        <span v-for="topping in item.toppings" :key="topping">{{ topping }}, </span>
 

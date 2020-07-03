@@ -22,7 +22,7 @@
 
                 <h1 class="food-detail--title">{{ food.title }}</h1>
 
-                <span class="food-detail--price">€{{ food.price_in_cents / 100 }}</span>
+                <span class="food-detail--price">R${{ food.price_in_cents / 100 }}</span>
 
 
             </div>
@@ -87,7 +87,7 @@
 
         <div class="cta-wrapper">
 
-            <button class="button primary" @click="addToOrder">€{{ addToOrderAmount / 100 }} <span>ADICIONAR</span></button>
+            <button class="button primary" @click="addToOrder">R${{ addToOrderAmount / 100 }} <span>ADICIONAR</span></button>
 
         </div>
 
@@ -125,6 +125,7 @@
                 let isDrinkable = (
                     this.food.filter == 'drink' ||
                     this.food.filter == 'drinks' ||
+                    this.food.filter == 'Drinks' ||
                     this.food.filter == 'birra' ||
                     this.food.filter == 'beer' ||
                     this.food.filter == 'birre') ? true : false

@@ -88,7 +88,7 @@
 
         </div>
 
-        <div v-else><p style="margin: 0">Grazie!</p></div>
+        <div v-else><p style="margin: 0">Obrigado!</p></div>
 
       </div>
 
@@ -99,7 +99,7 @@
 
     <a-modal :title="modalTitle" v-model="modalVisible" class="remove-ingredients-modal" @ok="handleRating">
 
-      <a-textarea placeholder="Il tuo commento" :rows="4" v-model="ratingText" ref="rating-textarea"/>
+      <a-textarea placeholder="Comente aqui" :rows="4" v-model="ratingText" ref="rating-textarea"/>
 
     </a-modal>
 
@@ -113,7 +113,7 @@ import moment from 'moment';
 
 const receipt = require('receipt');
 
-receipt.config.currency = 'EUR ';
+receipt.config.currency = 'R$ ';
 receipt.config.width = 50;
 receipt.config.ruler = '-';
 
@@ -206,7 +206,7 @@ export default {
 
             }else{
 
-                alert("Emettere lo scontrino prima.")
+                alert("Gerar o comprovante antes de sair.")
 
             }
 
@@ -220,7 +220,7 @@ export default {
             if(rate === 1){
 
 
-                this.modalTitle = "Ci potrebbe dire che cosa non e' andata bene per te?";
+                this.modalTitle = "Poderia nos dizer oque nāo gostou?";
 
                 this.modalVisible = true;
 
@@ -230,7 +230,7 @@ export default {
              if( rate === 5){
 
 
-                this.modalTitle = "Come possiamo migliorare il nostro servizio?";
+                this.modalTitle = "Como podemos melhorar nosso serviço?";
 
                 this.modalVisible = true;
 
@@ -311,7 +311,7 @@ export default {
             { type: 'empty' },
             { type: 'text', value: [
                     `${restaurantInfo.name}`,
-                    `P.IVA: ${restaurantInfo.partitaIva}`,
+                    `CNPJ: ${restaurantInfo.partitaIva}`,
                     `${restaurantInfo.address}`,
                 ], align: 'center' },
             { type: 'empty' },
@@ -322,25 +322,21 @@ export default {
             { type: 'empty' },
             { type: 'empty' },
             { type: 'properties', lines: [
-                    { name: 'Order Number', value: `${this.openOrder.orderId}` },
-                    { name: 'Date', value: `${moment(this.openOrder.date).format("DD/MM/YYYY  HH:mm")}` }
+                    { name: 'Numero da ordem', value: `${this.openOrder.orderId}` },
+                    { name: 'Data', value: `${moment(this.openOrder.date).format("DD/MM/YYYY  HH:mm")}` }
                 ] },
             { type: 'table', lines: this.orderedItems},
             { type: 'empty' },
-            { type: 'properties', lines: [
-                    { name: 'IVA (20.00%)', value: '' },
-                    { name: 'Total amount (excl. IVA)', value: `EUR ${this.orderTotalExcIva}` },
-                    { name: 'Total amount (incl. IVA)', value: `EUR ${this.orderTotal}` }
-                ] },
+            
             { type: 'empty' },
             { type: 'properties', lines: [
-                    { name: 'Amount Received', value: `EUR ${this.orderTotal}` }
+                    { name: 'Total Pago', value: `${receipt.config.currency} ${this.orderTotal}` }
                 ] },
             { type: 'empty' },
             { type: 'empty' },
-            { type: 'text', value: 'SALVA QUESTO SCONTRINO', align: 'center', padding: 5 },
+            { type: 'text', value: 'Salve esse comprovante', align: 'center', padding: 5 },
             { type: 'empty' },
-            { type: 'text', value: 'Grazie di aver Ordinato da HAMBU usando FLAVY.', align: 'center', padding: 5 },
+            { type: 'text', value: 'Obrigado por user Flavy!', align: 'center', padding: 5 },
             { type: 'empty' },
             { type: 'empty' },
         ]);

@@ -109,6 +109,7 @@ export default {
 
                 });
 
+
                 /*
                   BUG: ordem volta vazia assim que criada, mostrando apra o usuario a tela vermelha de ordem recusada.
                   TODO: encontrar uma maneira de evitar que a ordem volte vazia assim que criada
@@ -126,7 +127,7 @@ export default {
                       
                   }
 
-                }, 10000)
+                }, 8000)
 
             }
 
