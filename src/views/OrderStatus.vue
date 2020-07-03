@@ -8,7 +8,7 @@
       <h2>Nos desculpe</h2>
 
       <p style="margin-bottom: 50px">
-        Seu pedido foi recusado pela equipe. Um garçom chegará o mais rápido possível para informar o motivo.
+        Seu pedido foi recusado pela equipe. Um atendente chegará o mais rápido possível para informar o motivo.
       </p>
 
 

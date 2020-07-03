@@ -550,7 +550,7 @@
 
                     <h2>Ordene</h2>
 
-                    <p>Dê uma olhada no menu e faça seu pedido. <strong>Flavy</strong> o encaminhará imediatamente para a equipe de serviço. Quando sua ordem estiver pronta, um garçom te servirá.</p>
+                    <p>Dê uma olhada no menu e faça seu pedido. <strong>Flavy</strong> o encaminhará imediatamente para a equipe de serviço. Quando sua ordem estiver pronta, um atendente te servirá.</p>
 
                 </swiper-slide>
 

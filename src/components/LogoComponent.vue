@@ -4,7 +4,7 @@
 
         <img src="../../public/img/brand/flavy-icon.png" alt="">
 
-        <span><span>Flavy</span>. Seu gaçon virtual.</span>
+        <span><span>Flavy</span>. Seu atendente virtual.</span>
 
     </div>
 
