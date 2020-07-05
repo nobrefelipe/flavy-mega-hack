@@ -1,6 +1,6 @@
 # Flavy app (Mega Hack Shawee)
 
-landing page do pojeto: https://flavyapp.now.sh
+Landing page do pojeto: https://flavyapp.now.sh
 
 Webapp desenvolvida no Hackaton da Shawee
 
