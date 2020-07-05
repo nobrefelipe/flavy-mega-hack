@@ -148,6 +148,8 @@ export default {
 
     padding: 50px 20px;
 
+    max-width: 500px;
+
     display: flex;
 
     align-items: center;
