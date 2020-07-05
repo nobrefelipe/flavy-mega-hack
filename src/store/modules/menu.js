@@ -52,7 +52,10 @@ export default {
     // -----------------------------------------------------------------
     actions: {
 
-
+        /*
+            Chama nossa API para recuperar os dados do restaurante junto com o menu
+            @param customerId : ID do restaurante, passado na url
+        */
         getMenu: async (context, customerId) => {
 
 
