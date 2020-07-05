@@ -18,6 +18,7 @@ O front end, desenvolvido em Vue.js, se comunica com o backend, Firestore, atrav
 O passos sāo:
 1. Front end requisita os dados do estabelecimento atraves de uma chamada a uma Cloud Function.
 2. Essas funções se comunicam com o database e retornam os dados do estabelecimento desejado (atraves do ID)
-3. Quando o cliente efetua o pagamento, o front end chama uma funçāo que se comunica com a API do Stripe, que por sua vez retora um Token concretizando o pagamento.
+3. Quando o cliente efetua o pagamento, o front end chama uma funçāo que se comunica com a API do Stripe, que por sua vez retora um Token, esse token é salvo no databse dentro do objeto da ordem.
+4. Na webapp de administracao do restaurante, a ordem chega em tempo real, quando o atendente aceita a ordem, enviamos o Token para a API do Stripe, que por sua vez concretiza o pagamento.
 Nenhum dado é tratado no front end, tudo é feito pelas Cloud Functions, diminuindo os riscos de roubo de informações confidenciais.
 ![alt text](https://firebasestorage.googleapis.com/v0/b/flavy-app.appspot.com/o/Screenshot%202020-07-05%20at%2016.32.25.png?alt=media&token=5d9b7dfe-98fc-4873-9ad2-03ce3a082075)
