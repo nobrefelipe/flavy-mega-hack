@@ -7,3 +7,6 @@ Flavy é uma webapp que visa trazer mais rapidez na hora de ordenar e pagar por 
 Com Flavy os clientes navegam pelo menu diretamente pelo smartphone, fazem o pedido sem tempo de espera e pagam rapidamente, sem precisar fazer o download de nenhum aplicativo.
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/flavy-app.appspot.com/o/Screenshot%202020-07-05%20at%2015.35.30.png?alt=media&token=d60c367f-e94b-4fd0-9d6d-5756ac6fc2ff)
+
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/flavy-app.appspot.com/o/Screenshot%202020-07-05%20at%2015.42.48.png?alt=media&token=f8de99d3-9964-497b-b809-d6b964dd0b5f)
